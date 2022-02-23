@@ -5,12 +5,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #fffcf2;
-  color: #252422;
+  color: #fffcf2;
   font-family: "Nunito Sans", sans-serif;
   height: 100vh;
   width: 100%;
   margin: 0;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: #252422 1px 0 10px;
 }
 
 .container {
