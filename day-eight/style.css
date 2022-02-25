@@ -21,6 +21,20 @@ h2 {
   font-size: 3rem;
 }
 
+p {
+  color: #fff;
+}
+
+p > a {
+  text-decoration: none;
+  color: #DDBEA9;
+}
+
+p > a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -38,21 +52,34 @@ h2 {
   flex-direction: column;
 }
 
+
 .input-box {
+  position: relative;
   margin: 10px 0 20px;
+}
+
+.input-box label {
+  position: absolute;
+  top: 6px;
+  color: #fff;
+}
+
+.input-box label span {
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 input {
   background-color: transparent;
   border: 0;
   outline: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #fff;
   width: 100%;
   font-size: 1.5rem;
 }
 
 button {
   background-color: #fff;
+  border-radius: 10px;
   color: #DDBEA9;
   border: 0;
   cursor: pointer;
