@@ -65,8 +65,14 @@ p > a:hover {
 }
 
 .input-box label span {
+  display: inline-block;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+/* .input-box input:focus + label span,
+.input-box input:valid + label span {
+  transform: translateY(-30px);
+} */
 
 input {
   background-color: transparent;

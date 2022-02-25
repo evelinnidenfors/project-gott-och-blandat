@@ -13,24 +13,28 @@ window.onload = () => {
   email.onfocus = function() {
     document.querySelectorAll("#email ~ label span").forEach((span) => {
       span.style.color = "#DDBEA9";
+      span.style.transform = "translateY(-30px)";
     });
   }
 
   password.onfocus = function() {
     document.querySelectorAll("#password ~ label span").forEach((span) => {
       span.style.color = "#DDBEA9";
+      span.style.transform = "translateY(-30px)";
     });
   }
 
   email.onblur = function() {
     document.querySelectorAll("#email ~ label span").forEach((span) => {
       span.style.color = "#fff";
+      span.style.transform = "translateY(0)";
     });
   }
 
   password.onblur = function() {
     document.querySelectorAll("#password ~ label span").forEach((span) => {
       span.style.color = "#fff";
+      span.style.transform = "translateY(0)";
     });
   }
 };
