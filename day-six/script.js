@@ -1,17 +1,20 @@
 window.onload = () => {
   const SHOW_CLASS = "show";
 
-  let boxes = document.getElementsByClassName("box")
-  let scrollTop = window.scrollY;
-  let docHeight = document.body.offsetHeight;
-  let winHeight = window.innerHeight;
+  let boxes = document.querySelectorAll(".box");
 
-  let scrollPercentage = scrollTop / (docHeight - winHeight);
+  const addShowClass = () =>
+    boxes.forEach((box) => {
+      if (window.innerHeight + window.scrollY > box.getBoundingClientRect().y) {
+        box.classList.add(SHOW_CLASS);
+      } else {
+        box.classList.remove(SHOW_CLASS);
+      }
+    });
 
-  let scrollPosition = 0;
+  addShowClass();
 
-  // boxes.foreach(box => )
-
-  console.log(scrollPercentage);
-
-}
+  window.onscroll = () => {
+    addShowClass();
+  };
+};
