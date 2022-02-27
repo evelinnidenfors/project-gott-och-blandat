@@ -85,6 +85,7 @@ h2 {
   height: 30px;
   border-radius: 100%;
   color: #7B6E61;
+  transition: 300ms;
 }
 
 .faq-toggle:focus {

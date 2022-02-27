@@ -10,12 +10,4 @@ window.onload = () => {
       });
     });
   }
-
-  // BUTTON.onclick = () => {
-  //   if (ACTIVE_CLASS) {
-  //     document.getElementsByClassName("faq").classList.add(ACTIVE_CLASS);
-  //   } else {
-  //     document.getElementsByClassName("faq").classList.remove(ACTIVE_CLASS);
-  //   }
-  // }
 };
