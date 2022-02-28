@@ -61,38 +61,58 @@ html.dark button:hover {
 
 .clock {
   display: flex;
-  height: 130px;
+  height: 210px;
+  width: 210px;
+  position:relative;
+  margin-bottom: 20px;
+  background-color: #272727;
+  border-radius: 100%;
 }
 
 .needle {
   height: 100px;
   width: 4px;
-  background-color: #272727;
+  /* background-color: #272727; */
+  background-color: #ffe8d6;;
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: 400ms;
+  transform-origin: bottom center;
+}
+
+.needle.minute {
+  height: 90px;
 }
 
 .needle.hour {
-  height: 60px;
+  height: 70px;
+  width: 5px;
 }
 
 .needle.second {
   background-color: #6b705c;
+  width: 3px;
 }
 
 .center {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #272727;
+  background-color: #ffe8d6;
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: 400ms;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.dark .clock {
+  background-color: #ffe8d6;
 }
 
 .dark .needle {
-  background-color: #ffe8d6;
+  background-color: #272727;
 }
 
 .dark .needle.second {
@@ -100,7 +120,7 @@ html.dark button:hover {
 }
 
 .dark .center {
-  background-color: #ffe8d6;
+  background-color: #272727;
 }
 
 .date {
