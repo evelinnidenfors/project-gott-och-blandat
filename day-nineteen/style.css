@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+
+html {
+  background-color: #ddbea9;
+  color: #272727;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 70px 0;
+  transition: 400ms;
+}
+
+html.dark {
+  background-color: #272727;
+  color: #ddbea9;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+html button {
+  border: none;
+  background-color: #272727;
+  color: #ddbea9;
+  font-size: 1.4rem;
+  padding: 20px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+html button:hover {
+  border: none;
+  background-color: #272727;
+  color: #968174;
+  font-size: 1.4rem;
+  padding: 20px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+html.dark button {
+  background-color: #ddbea9;
+  color: #272727;
+}
+
+html.dark button:hover {
+  background-color: #968174;
+  color: #272727;
+}
+
+.clock-container {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.date {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.circle {
+  background-color: #272727;
+  color: #ddbea9;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.dark .circle {
+  background-color: #ddbea9;
+  color: #272727;
+}
