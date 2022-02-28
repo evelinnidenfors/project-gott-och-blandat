@@ -7,7 +7,6 @@ window.onload = () => {
 
   // Setting dark or light mode on click of button
   TOGGLE.addEventListener("click", (e) => {
-    console.log("loaded");
     if (HTML.classList.contains(DARK_MODE)) {
       HTML.classList.remove(DARK_MODE);
       e.target.innerHTML = "Dark Mode";
