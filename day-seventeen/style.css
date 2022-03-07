@@ -1,49 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
 
 body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: #C7D6D5;
-  color: #0C120C;
-  font-family: 'Nunito Sans', sans-serif;
+  background-color: #c7d6d5;
+  color: #0c120c;
+  font-family: "Nunito Sans", sans-serif;
   width: 100%;
   height: 100vh;
 }
 
 header {
-  background-color: #9AA4A5;
+  background-color: #9aa4a5;
   display: flex;
   justify-content: flex-end;
   padding: 10px;
 }
 
-.title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 1.1rem;
-  color: #C7D6D5;
-}
-
 #search {
-  background-color: #9AA4A5;
-  color: #C7D6D5;
+  background-color: #9aa4a5;
+  color: #c7d6d5;
   font-size: 1.3rem;
-  border: 3px solid #C7D6D5;
+  border: 3px solid #c7d6d5;
   border-radius: 50px;
   padding: 10px 20px;
   transition: 200ms;
 }
 
 #search::placeholder {
-  color: #C7D6D5;
+  color: #c7d6d5;
 }
 
 #search:focus {
   outline: none;
-  background-color: #C7D6D5;
-  color: #9AA4A5;
+  background-color: #c7d6d5;
+  color: #9aa4a5;
 }
 
 #main {
@@ -53,32 +45,26 @@ header {
 }
 
 .movie-card {
+  position: relative;
   width: 300px;
   margin: 1rem;
-  background-color: #9AA4A5;
+  background-color: #9aa4a5;
   border-radius: 4px;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
 .movie-card img {
   width: 100%;
 }
 
-.movie-card p {
+.title {
   display: flex;
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-  border-radius: 100%;
-  background-color: #C7D6D5;
-  color: #9AA4A5;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
-
-.title div {
-  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.1rem;
+  color: #c7d6d5;
+  padding: 0 10px;
 }
 
 .title h2 {
@@ -87,16 +73,38 @@ header {
   align-self: center;
 }
 
-.movie-card .title {
-  padding: 0 10px;
+.title div {
+  flex-grow: 1;
 }
 
-.movie-card .overview {
+.title p {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 100%;
+  background-color: #c7d6d5;
+  color: #9aa4a5;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.overview {
+  background-color: #fff;
+  color: #9aa4a5;
+  position: absolute;
   display: none;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
   padding: 0 10px;
 }
 
 .movie-card:hover .overview {
-  display: relative;
-  bottom: 0;
+  transform: translateY(0);
+  display: block;
 }
