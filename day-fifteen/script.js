@@ -8,8 +8,6 @@ window.onload = () => {
       const COUNT = parseInt(counter.innerText);
       const INCR = Math.trunc(TARGET / SPEED);
 
-      console.log("Target is: " + TARGET + ", Count is: " + COUNT)
-
       if (COUNT < TARGET) {
         counter.innerText = COUNT + INCR;
         setTimeout(updateCount, 1);
