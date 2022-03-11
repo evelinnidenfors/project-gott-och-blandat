@@ -1,5 +1,6 @@
 window.onload = () => {
   const TEXTAREA = document.getElementById("textarea");
+  const HIGHLIGHTED_CLASS = "highlighted";
 
   TEXTAREA.onkeyup = (event) => {
     const INPUT = event.target.value.split(",");
@@ -15,12 +16,29 @@ window.onload = () => {
       }
     });
 
-    if (event.key === 'Enter' || event.code === 'Enter') {
+    if (event.key === "Enter" || event.code === "Enter") {
+      TEXTAREA.value = "";
       const SPANS = document.querySelectorAll("#tags span");
-      const RAND_SPAN = SPANS[Math.floor(Math.random() * SPANS.length)];
+      let counter = 0;
+      let stopTheCount = SPANS.length + 5;
+      let intervalId = setInterval(spinTheWheel, 100);
 
-      RAND_SPAN.style.backgroundColor = "#2b161b";
+      function spinTheWheel() {
+        counter++;
+
+        if (counter === stopTheCount) {
+          clearInterval(intervalId);
+        }
+
+        const RAND_SPAN = SPANS[Math.floor(Math.random() * SPANS.length)];
+        const HIGHLIGHTED = document.querySelector(`.${HIGHLIGHTED_CLASS}`);
+
+        if (HIGHLIGHTED) {
+          HIGHLIGHTED.classList.remove(HIGHLIGHTED_CLASS);
+        }
+
+        RAND_SPAN.classList.add(HIGHLIGHTED_CLASS);
+      }
     }
   };
-
 };

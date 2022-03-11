@@ -33,6 +33,10 @@ p {
   flex-wrap: wrap;
 }
 
+.highlighted {
+  background-color: #2b161b !important;
+}
+
 #tags span {
   background-color: #523635;
   border-radius: 100px;
