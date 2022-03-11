@@ -17,28 +17,32 @@ window.onload = () => {
     });
 
     if (event.key === "Enter" || event.code === "Enter") {
-      TEXTAREA.value = "";
-      const SPANS = document.querySelectorAll("#tags span");
-      let counter = 0;
-      let stopTheCount = SPANS.length + 5;
-      let intervalId = setInterval(spinTheWheel, 100);
+      randomizer();
+    }
+  };
 
-      function spinTheWheel() {
-        counter++;
+  function randomizer() {
+    TEXTAREA.value = "";
+    const SPANS = document.querySelectorAll("#tags span");
+    let counter = 0;
+    let stopTheCount = SPANS.length + 5;
+    let intervalId = setInterval(spinTheWheel, 100);
 
-        if (counter === stopTheCount) {
-          clearInterval(intervalId);
-        }
+    function spinTheWheel() {
+      counter++;
 
-        const RAND_SPAN = SPANS[Math.floor(Math.random() * SPANS.length)];
-        const HIGHLIGHTED = document.querySelector(`.${HIGHLIGHTED_CLASS}`);
-
-        if (HIGHLIGHTED) {
-          HIGHLIGHTED.classList.remove(HIGHLIGHTED_CLASS);
-        }
-
-        RAND_SPAN.classList.add(HIGHLIGHTED_CLASS);
+      if (counter === stopTheCount) {
+        clearInterval(intervalId);
       }
+
+      const RAND_SPAN = SPANS[Math.floor(Math.random() * SPANS.length)];
+      const HIGHLIGHTED = document.querySelector(`.${HIGHLIGHTED_CLASS}`);
+
+      if (HIGHLIGHTED) {
+        HIGHLIGHTED.classList.remove(HIGHLIGHTED_CLASS);
+      }
+
+      RAND_SPAN.classList.add(HIGHLIGHTED_CLASS);
     }
   };
 };
