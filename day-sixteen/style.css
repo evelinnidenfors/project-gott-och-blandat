@@ -34,7 +34,7 @@ h2 {
   width: 100%;
   position: absolute;
   bottom: 0;
-  border-radius: 0 0 40px 40px;
+  border-radius: 0 0 37px 37px;
   justify-content: center;
   align-items: center;
   font-weight: 700;
@@ -58,7 +58,6 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* justify-content: space-around; */
   margin: 10px;
   border: 4px solid #16261c;
   border-radius: 0 0 40px 40px;
@@ -69,6 +68,7 @@ h2 {
 }
 
 .glass.small-glass {
+  justify-content: center;
   width: 40px;
   height: 100px;
   display: flex;
