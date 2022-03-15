@@ -16,15 +16,15 @@ window.onload = () => {
     } else if (direction === "left" && sliders[activeSlideIndex]) {
       sliders[activeSlideIndex].classList.remove(ACTIVE_CLASS);
       if (activeSlideIndex === 0) {
-        sliders[numberOfSliders - 1].classList.add(ACTIVE_CLASS)
+        activeSlideIndex = numberOfSliders - 1;
+        sliders[activeSlideIndex].classList.add(ACTIVE_CLASS)
       } else {
         activeSlideIndex = (activeSlideIndex - 1) % numberOfSliders;
         sliders[activeSlideIndex].classList.add(ACTIVE_CLASS);
       }
 
     }
-
-    console.log(sliders);
+    document.body.style.backgroundImage = sliders[activeSlideIndex].style.backgroundImage;
   }
 
   LEFT_BUTTON.addEventListener("click", function setActiveClass() {
