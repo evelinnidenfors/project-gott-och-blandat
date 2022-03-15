@@ -12,6 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: 400ms;
+  overflow: hidden;
 }
 
 body::before {
@@ -30,15 +32,23 @@ body::before {
   overflow: hidden;
   width: 70vw;
   height: 70vh;
+  transition: 300ms;
 }
 
-.slider.active {
+.slider {
   position: absolute;
   width: 100vw;
   height: 100vh;
   background-position: center center;
   background-size: cover;
   z-index: 1;
+  top: -15vh;
+  left: -15vw;
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
 }
 
 button {
