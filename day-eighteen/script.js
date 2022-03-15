@@ -9,21 +9,18 @@ window.onload = () => {
     const sliders = document.querySelectorAll(".slider");
     const numberOfSliders = sliders.length;
 
-    if (direction === "right" && sliders[activeSlideIndex]) {
-      sliders[activeSlideIndex].classList.remove(ACTIVE_CLASS);
+    sliders[activeSlideIndex].classList.remove(ACTIVE_CLASS);
+
+    if (direction === "right") {
       activeSlideIndex = (activeSlideIndex + 1) % numberOfSliders;
-      sliders[activeSlideIndex].classList.add(ACTIVE_CLASS);
-    } else if (direction === "left" && sliders[activeSlideIndex]) {
-      sliders[activeSlideIndex].classList.remove(ACTIVE_CLASS);
+    } else if (direction === "left") {
       if (activeSlideIndex === 0) {
         activeSlideIndex = numberOfSliders - 1;
-        sliders[activeSlideIndex].classList.add(ACTIVE_CLASS)
       } else {
         activeSlideIndex = (activeSlideIndex - 1) % numberOfSliders;
-        sliders[activeSlideIndex].classList.add(ACTIVE_CLASS);
       }
-
     }
+    sliders[activeSlideIndex].classList.add(ACTIVE_CLASS);
     document.body.style.backgroundImage = sliders[activeSlideIndex].style.backgroundImage;
   }
 
