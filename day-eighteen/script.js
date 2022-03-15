@@ -20,6 +20,7 @@ window.onload = () => {
         activeSlideIndex = (activeSlideIndex - 1) % numberOfSliders;
       }
     }
+
     sliders[activeSlideIndex].classList.add(ACTIVE_CLASS);
     document.body.style.backgroundImage = sliders[activeSlideIndex].style.backgroundImage;
   }
