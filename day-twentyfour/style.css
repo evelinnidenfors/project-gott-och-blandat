@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
 
 body {
   background-color: #d9d0d1;
@@ -7,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 #card {
@@ -19,14 +19,15 @@ body {
   height: 480px;
   align-items: center;
   justify-content: start;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 #image {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden
+  overflow: hidden;
 }
 
 img {
@@ -48,4 +49,23 @@ h2 {
 
 p {
   margin: 0;
+}
+
+#author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #787172;
+}
+
+.author-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
 }
