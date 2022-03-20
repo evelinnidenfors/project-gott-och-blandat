@@ -3,18 +3,6 @@ window.onload = () => {
   const BOXES = document.querySelectorAll(".box");
   const HOVER_CLASS = ' hovering';
 
-  IMAGE.addEventListener('dragstart', dragStart);
-  IMAGE.addEventListener('dragend', dragEnd);
-
-  function dragStart(e) {
-
-  };
-
-  function dragEnd(e) {
-
-  };
-
-
   BOXES.forEach(box => {
     box.addEventListener('dragenter', dragEnter);
     box.addEventListener('dragover', dragOver);
