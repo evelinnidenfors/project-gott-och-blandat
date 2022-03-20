@@ -37,6 +37,6 @@ window.onload = () => {
   };
 
   function drop(e) {
-    console.log(e)
+    this.append(IMAGE);
   };
 }
