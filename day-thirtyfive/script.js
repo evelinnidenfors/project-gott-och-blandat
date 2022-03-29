@@ -1,12 +1,23 @@
 window.onload = () => {
   const PREV_BTN = document.getElementById("prev-btn");
   const NEXT_BTN = document.getElementById("next-btn");
+  const IMAGE_CONTAINER = document.getElementById("image-container");
+  const IMAGES = document.querySelectorAll(".image-container > img");
+  const IMAGE_LENGTH = IMAGES.length;
 
-  PREV_BTN.addEventListener('click', () => {
-    console.log('clicked prev');
-  });
+  let translateIndex = 0;
 
-  NEXT_BTN.addEventListener('click', () => {
-    console.log('clicked next');
-  });
-}
+  PREV_BTN.addEventListener('click', () => spinCarousel('prev'));
+
+  NEXT_BTN.addEventListener('click', () => spinCarousel('next'));
+
+  function spinCarousel(direction) {
+    if (direction === 'prev') {
+      translateIndex -= 500;
+    } else if (direction === 'next') {
+      translateIndex += 500;
+    }
+
+    IMAGE_CONTAINER.style.transform = `translateX(${translateIndex}px)`;
+  };
+};

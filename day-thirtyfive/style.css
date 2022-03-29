@@ -9,20 +9,25 @@ body {
   background-color: #97b0c5;
 }
 
+
 .container {
   width: 500px;
   height: 530px;
   overflow: hidden;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.image-container {
+#image-container {
   display: flex;
+  width: 500px;
+  height: 500px;
+  transform: translateX(0);
 }
 
 img {
+  min-width: 100%;
+  height: 100%;
   object-fit: cover;
-  width: 500px;
-  height: 500px;
 }
 
 .button-container {
@@ -35,7 +40,7 @@ button {
   border: 1px solid #733435;
   color: #fff;
   height: 30px;
-  width: 249px;
+  width: 49.5%;
   cursor: pointer;
   transition: 300ms ease-in-out;
   font-family: 'Nunito Sans';
