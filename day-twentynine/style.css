@@ -34,4 +34,20 @@ p {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
   margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card .fa-heart {
+  position: absolute;
+  color: #691f1c;
+  animation: grow 0.6s linear;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
 }

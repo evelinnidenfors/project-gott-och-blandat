@@ -15,9 +15,17 @@ window.onload = () => {
     HEART.classList.add('fas');
     HEART.classList.add('fa-heart');
 
-    const x = e.screenX;
-    const y = e.screenY;
+    const x = e.clientX;
+    const y = e.clientY;
 
-    console.log(x, y)
+    const leftOffset = x - e.target.offsetLeft;
+    const topOffset = y - e.target.offsetTop;
+
+    HEART.style.top = `${topOffset}px`;
+    HEART.style.left = `${leftOffset}px`;
+
+    CARD.appendChild(HEART);
+
+    setTimeout(() => HEART.remove(), 1000)
   }
 }
