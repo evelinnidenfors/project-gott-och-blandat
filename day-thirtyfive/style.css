@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #97b0c5;
 }
 
 .container {
@@ -37,6 +38,8 @@ button {
   width: 249px;
   cursor: pointer;
   transition: 300ms ease-in-out;
+  font-family: 'Nunito Sans';
+  font-weight: 700;
 }
 
 button:hover {
