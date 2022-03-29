@@ -15,11 +15,11 @@ window.onload = () => {
     if (direction === 'prev') {
       translateIndex += 500;
       if (translateIndex > 0) {
-        translateIndex = 0;
+        translateIndex = -(500 * (IMAGE_LENGTH - 1));
       }
     } else if (direction === 'next') {
       translateIndex -= 500;
-      if (translateIndex < -(500 * IMAGE_LENGTH - 1)) {
+      if (translateIndex < -(500 * (IMAGE_LENGTH - 1))) {
         translateIndex = 0;
       }
     }
