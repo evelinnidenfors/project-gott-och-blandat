@@ -6,19 +6,12 @@ window.onload = () => {
   const IMAGE_LENGTH = IMAGES.length;
 
   let translateIndex = 0;
-  let timer;
 
   PREV_BTN.addEventListener('click', () => spinCarousel('prev'));
 
   NEXT_BTN.addEventListener('click', () => spinCarousel('next'));
 
-
-  function nextSlide() {
-    timer = setTimeout(() => spinCarousel('next'), 1000);
-  }
-
-  clearTimeout(timer);
-  setTimeout(nextSlide(), 500)
+  setInterval(() => spinCarousel('next'), 3000)
 
   function spinCarousel(direction) {
     if (direction === 'prev') {
